@@ -1,0 +1,228 @@
+/* Reset-ish */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #fafafa;
+  color: #262626;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 935px;
+  padding: 20px;
+}
+
+/* Optional phone mockup (hidden on small screens) */
+.phone-mockup {
+  display: none;
+  flex: 0 0 380px;
+  height: 580px;
+  border-radius: 40px;
+  background: linear-gradient(145deg, #111, #333);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.phone-mockup::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border-radius: 32px;
+  background: url("https://images.pexels.com/photos/2486168/pexels-photo-2486168.jpeg?auto=compress&cs=tinysrgb&w=800")
+              center/cover no-repeat;
+  filter: saturate(1.1);
+}
+
+.phone-notch {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 18px;
+  background: #000;
+  border-radius: 0 0 16px 16px;
+}
+
+/* Right column: login card and sign-up */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+  gap: 10px;
+}
+
+.card {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  padding: 40px 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-family: "Billabong", "Brush Script MT", cursive;
+  font-size: 3rem;
+  letter-spacing: 0.02em;
+  user-select: none;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-field {
+  width: 100%;
+  font-size: 12px;
+  padding: 9px 8px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background-color: #fafafa;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #a8a8a8;
+}
+
+.login-button {
+  margin-top: 8px;
+  padding: 8px 0;
+  border: none;
+  border-radius: 8px;
+  background: #0095f6;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.login-button:disabled {
+  background: rgba(0,149,246,0.3);
+  cursor: default;
+}
+
+.login-button:hover:not(:disabled) {
+  background: #0081d6;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0 2px;
+  gap: 18px;
+  color: #8e8e8e;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.separator-line {
+  height: 1px;
+  flex: 1;
+  background-color: #dbdbdb;
+}
+
+.social-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #385185;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.social-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #4267B2, #29487D);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.forgot-password {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #00376b;
+  text-decoration: none;
+}
+
+.signup-card {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  padding: 18px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+.signup-card a {
+  color: #0095f6;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.footer {
+  margin-top: 18px;
+  font-size: 12px;
+  text-align: center;
+  color: #8e8e8e;
+}
+
+/* Responsive behavior */
+@media (min-width: 900px) {
+  .phone-mockup {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    background-color: #fff;
+  }
+  .card, .signup-card {
+    border: none;
+  }
+  .page {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}

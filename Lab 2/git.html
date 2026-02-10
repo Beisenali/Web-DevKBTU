@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Pricing – Copilot-powered platform</title>
+    <link rel="stylesheet" href="pricing.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="page__inner">
+        <nav class="nav" aria-label="Main">
+          <a href="#" class="nav__brand">
+            <span class="nav__logo" aria-hidden="true"></span>
+            <span class="nav__label">GitHub</span>
+          </a>
+          <button class="nav__cta" type="button">Sign in</button>
+        </nav>
+      </header>
+
+      <main class="page__inner">
+        <section class="hero" aria-labelledby="hero-heading">
+          <div>
+            <p class="hero__badge">
+              <span class="hero__badge-pill">New</span>
+              <span>Copilot-powered developer platform</span>
+            </p>
+            <h1 id="hero-heading" class="hero__headline">
+              Try the Copilot-powered platform
+            </h1>
+            <p class="hero__description">
+              Build, ship, and maintain secure software faster with GitHub. Start for free, then
+              upgrade as your team grows.
+            </p>
+          </div>
+
+          <div>
+            <div class="hero__actions">
+              <button class="hero__cta-button" type="button">
+                Start free with GitHub
+              </button>
+              <p class="hero__cta-sub">No credit card required</p>
+            </div>
+
+            <form class="hero__form" aria-label="Start with your work email">
+              <div class="hero__field">
+                <label class="hero__label" for="work-email">Work email</label>
+                <input
+                  class="hero__input"
+                  type="email"
+                  id="work-email"
+                  name="work-email"
+                  placeholder="you@company.com"
+                  required
+                />
+              </div>
+              <button class="button button--primary" type="submit">
+                Get started
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <section class="pricing" aria-labelledby="pricing-heading">
+          <p class="pricing__eyebrow">Pricing</p>
+          <h2 id="pricing-heading" class="pricing__headline">
+            Choose the plan that fits your team
+          </h2>
+
+          <div class="pricing__grid">
+            <!-- Free -->
+            <article class="pricing-card" aria-label="Free plan">
+              <p class="pricing-card__label">For individuals &amp; small projects</p>
+              <h3 class="pricing-card__title">Free</h3>
+              <p class="pricing-card__price">
+                <span class="pricing-card__price-number">$0</span>
+                <span class="pricing-card__price-unit">per user / month</span>
+              </p>
+              <p class="pricing-card__description">
+                The basics for exploring GitHub, hosting personal projects, and collaborating with
+                a few people.
+              </p>
+              <div class="pricing-card__cta">
+                <button class="button button--full button--primary" type="button">
+                  Get started for free
+                </button>
+              </div>
+              <p class="pricing-card__meta">Includes:</p>
+              <ul class="pricing-card__list">
+                <li>Public &amp; private repositories</li>
+                <li>Community support</li>
+                <li>Basic code scanning</li>
+              </ul>
+            </article>
+
+            <!-- Team -->
+            <article class="pricing-card pricing-card--highlight" aria-label="Team plan">
+              <div class="pricing-card__badge">Most popular</div>
+              <p class="pricing-card__label">For growing teams</p>
+              <h3 class="pricing-card__title">Team</h3>
+              <p class="pricing-card__price">
+                <span class="pricing-card__price-number">$4</span>
+                <span class="pricing-card__price-unit">per user / month*</span>
+              </p>
+              <p class="pricing-card__description">
+                Advanced collaboration, security, and management tools for professional teams
+                shipping to production.
+              </p>
+              <div class="pricing-card__cta">
+                <button class="button button--full button--primary" type="button">
+                  Start a free trial
+                </button>
+              </div>
+              <p class="pricing-card__meta">Everything in Free, plus:</p>
+              <ul class="pricing-card__list">
+                <li>Required reviews &amp; protected branches</li>
+                <li>Team &amp; code owners</li>
+                <li>GitHub Codespaces &amp; Actions minutes</li>
+              </ul>
+            </article>
+
+            <!-- Enterprise -->
+            <article class="pricing-card" aria-label="Enterprise plan">
+              <p class="pricing-card__label">For large organizations</p>
+              <h3 class="pricing-card__title">Enterprise</h3>
+              <p class="pricing-card__price">
+                <span class="pricing-card__price-number">Contact us</span>
+              </p>
+              <p class="pricing-card__description">
+                Enterprise-grade security, compliance, and scale for global organizations running
+                GitHub at scale.
+              </p>
+              <div class="pricing-card__cta">
+                <button class="button button--full" type="button">
+                  Talk to sales
+                </button>
+              </div>
+              <p class="pricing-card__meta">Everything in Team, plus:</p>
+              <ul class="pricing-card__list">
+                <li>Advanced security (SAST, secrets, supply chain)</li>
+                <li>Enterprise SSO &amp; audit log streaming</li>
+                <li>Centralized policy management</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="addons" aria-labelledby="addons-heading">
+          <header class="addons__header">
+            <div class="addons__title-block">
+              <p class="addons__eyebrow">Additional add-ons</p>
+              <h2 id="addons-heading" class="addons__title">
+                Extend GitHub for how your team works
+              </h2>
+              <p class="addons__description">
+                Add AI, security, and productivity tools to any plan with flexible usage-based
+                pricing.
+              </p>
+            </div>
+          </header>
+
+          <div class="addons__grid">
+            <article class="addon-card">
+              <div class="addon-card__label-row">
+                <h3 class="addon-card__title">GitHub Copilot Individual</h3>
+                <span class="addon-card__badge">AI</span>
+              </div>
+              <p class="addon-card__description">
+                Get AI pair programming suggestions directly in your IDE for individuals.
+              </p>
+              <p class="addon-card__meta">$10 per user / month</p>
+            </article>
+
+            <article class="addon-card">
+              <div class="addon-card__label-row">
+                <h3 class="addon-card__title">GitHub Copilot Business</h3>
+                <span class="addon-card__badge">Team</span>
+              </div>
+              <p class="addon-card__description">
+                Manage Copilot at scale with policy controls, telemetry, and enterprise features.
+              </p>
+              <p class="addon-card__meta">$19 per user / month</p>
+            </article>
+
+            <article class="addon-card">
+              <div class="addon-card__label-row">
+                <h3 class="addon-card__title">Advanced Security</h3>
+                <span class="addon-card__badge">Security</span>
+              </div>
+              <p class="addon-card__description">
+                Turn on code scanning, secret scanning, and supply chain security across your org.
+              </p>
+              <p class="addon-card__meta">Usage-based pricing</p>
+            </article>
+
+            <article class="addon-card">
+              <div class="addon-card__label-row">
+                <h3 class="addon-card__title">GitHub Actions</h3>
+                <span class="addon-card__badge">CI/CD</span>
+              </div>
+              <p class="addon-card__description">
+                Run CI/CD workflows on hosted runners with extra minutes and storage.
+              </p>
+              <p class="addon-card__meta">Additional minutes &amp; storage available</p>
+            </article>
+
+            <article class="addon-card">
+              <div class="addon-card__label-row">
+                <h3 class="addon-card__title">GitHub Codespaces</h3>
+                <span class="addon-card__badge">Cloud dev</span>
+              </div>
+              <p class="addon-card__description">
+                Cloud-hosted dev environments that spin up in seconds with your dev container.
+              </p>
+              <p class="addon-card__meta">Pay for compute &amp; storage as you go</p>
+            </article>
+
+            <article class="addon-card">
+              <div class="addon-card__label-row">
+                <h3 class="addon-card__title">GitHub Enterprise Support</h3>
+                <span class="addon-card__badge">Support</span>
+              </div>
+              <p class="addon-card__description">
+                Add 24/7 enterprise-grade support and guidance from GitHub experts.
+              </p>
+              <p class="addon-card__meta">Contact sales for pricing</p>
+            </article>
+          </div>
+        </section>
+
+        <footer class="page-footer">
+          <p>
+            *Sample pricing for practice only. Not affiliated with GitHub. Built for layout and
+            CSS exercises.
+          </p>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Instagram Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="inst.css" />
+</head>
+<body>
+  <div class="page">
+    <!-- Optional phone mockup (hidden on small screens) -->
+    <div class="phone-mockup" aria-hidden="true">
+      <div class="phone-notch"></div>
+    </div>
+
+    <!-- Right column: login and sign-up -->
+    <div class="right-column">
+      <div class="card" aria-label="Instagram login form">
+        <div class="logo">Instagram</div>
+
+        <form>
+          <div class="input-group">
+            <input
+              class="input-field"
+              type="text"
+              name="identifier"
+              placeholder="Phone number, username, or email"
+              autocomplete="username"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <input
+              class="input-field"
+              type="password"
+              name="password"
+              placeholder="Password"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+
+          <button class="login-button" type="submit">
+            Log In
+          </button>
+
+          <div class="separator">
+            <span class="separator-line"></span>
+            <span>OR</span>
+            <span class="separator-line"></span>
+          </div>
+
+          <a href="#" class="social-login">
+            <span class="social-icon">f</span>
+            <span>Log in with Facebook</span>
+          </a>
+
+          <a href="#" class="forgot-password">Forgot password?</a>
+        </form>
+      </div>
+
+      <div class="signup-card">
+        Don’t have an account?
+        <a href="#">Sign up</a>
+      </div>
+
+      <div class="footer">
+        © 2026 Instagram Clone
+      </div>
+    </div>
+  </div>
+</body>
+</html>
