@@ -1,0 +1,60 @@
+article img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.listing-description h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.listing-description p {
+  margin: 0 0 1rem;
+  color: #666;
+}
+
+.listing-features h3,
+.listing-apply h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.125rem;
+}
+
+.listing-features ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.listing-apply form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 300px;
+  margin-top: 0.5rem;
+}
+
+.listing-apply label {
+  font-weight: 500;
+}
+
+.listing-apply input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.listing-apply button {
+  padding: 0.5rem 1rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.listing-apply button:hover {
+  background: #555;
+}

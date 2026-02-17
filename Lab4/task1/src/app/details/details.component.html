@@ -1,0 +1,31 @@
+@if (housingLocation) {
+  <article>
+    <img [src]="housingLocation.photo" [alt]="housingLocation.name" />
+    <section class="listing-description">
+      <h2>{{ housingLocation.name }}</h2>
+      <p>{{ housingLocation.city }}, {{ housingLocation.state }}</p>
+    </section>
+    <section class="listing-features">
+      <h3>About this housing location</h3>
+      <ul>
+        <li>Units available: {{ housingLocation.availableUnits }}</li>
+        <li>Wi‑Fi: {{ housingLocation.wifi ? 'Yes' : 'No' }}</li>
+        <li>Laundry: {{ housingLocation.laundry ? 'Yes' : 'No' }}</li>
+      </ul>
+    </section>
+    <section class="listing-apply">
+      <h3>Apply now to live here</h3>
+      <form [formGroup]="applyForm" (submit)="submitApplication(); $event.preventDefault()">
+        <label for="first-name">First Name</label>
+        <input id="first-name" type="text" formControlName="firstName" />
+        <label for="last-name">Last Name</label>
+        <input id="last-name" type="text" formControlName="lastName" />
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email" />
+        <button type="submit">Apply now</button>
+      </form>
+    </section>
+  </article>
+} @else {
+  <p>Housing location not found.</p>
+}

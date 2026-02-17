@@ -1,0 +1,21 @@
+header {
+  background: #333;
+  padding: 1rem 2rem;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header a:hover,
+header a.active {
+  color: #ffd700;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}

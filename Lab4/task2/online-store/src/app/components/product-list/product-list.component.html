@@ -1,0 +1,10 @@
+<header class="header">
+  <h1>Online Store</h1>
+  <p class="subtitle">Catalog from Kaspi.kz</p>
+</header>
+
+<main class="product-grid">
+  @for (product of products; track product.id) {
+    <app-product-card [product]="product" />
+  }
+</main>

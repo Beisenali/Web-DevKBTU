@@ -1,0 +1,72 @@
+<article class="product-card">
+  <a [href]="product.link" target="_blank" rel="noopener noreferrer" class="product-link">
+    <div class="image-gallery">
+      <img
+        [src]="selectedImage"
+        [alt]="product.name"
+        class="main-image"
+        (error)="onImageError($event)"
+      />
+      @if (product.images.length > 1) {
+        <button
+          type="button"
+          class="nav-btn nav-prev"
+          (click)="prevImage(); $event.preventDefault(); $event.stopPropagation();"
+          aria-label="Previous image"
+        >
+          ‹
+        </button>
+        <button
+          type="button"
+          class="nav-btn nav-next"
+          (click)="nextImage(); $event.preventDefault(); $event.stopPropagation();"
+          aria-label="Next image"
+        >
+          ›
+        </button>
+        <div class="thumbnails">
+          @for (img of product.images; track $index) {
+            <button
+              type="button"
+              class="thumb"
+              [class.thumb-active]="selectedImageIndex === $index"
+              (click)="selectImage($index); $event.preventDefault(); $event.stopPropagation();"
+            >
+              <img [src]="img" [alt]="'Thumbnail ' + ($index + 1)" />
+            </button>
+          }
+        </div>
+      }
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">{{ product.name }}</h3>
+      <p class="product-description">{{ product.description }}</p>
+      <div class="rating" [attr.aria-label]="'Rating: ' + product.rating + ' out of 5'">
+        @for (star of getRatingStars(); track $index) {
+          <span
+            class="star"
+            [class.filled]="$index < Math.floor(product.rating)"
+            [class.half]="$index === Math.floor(product.rating) && product.rating % 1 >= 0.5"
+          >
+            ★
+          </span>
+        }
+        <span class="rating-value">{{ product.rating }}</span>
+      </div>
+      <p class="product-price">{{ formatPrice(product.price) }} ₸</p>
+    </div>
+  </a>
+  <div class="actions">
+    <a [href]="product.link" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+      View on Kaspi
+    </a>
+    <div class="share-buttons">
+      <button type="button" class="btn btn-share" (click)="shareWhatsApp()" title="Share on WhatsApp">
+        WhatsApp
+      </button>
+      <button type="button" class="btn btn-share" (click)="shareTelegram()" title="Share on Telegram">
+        Telegram
+      </button>
+    </div>
+  </div>
+</article>
