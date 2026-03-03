@@ -1,0 +1,31 @@
+<section class="page">
+  <h1>Album Photos</h1>
+
+  <p *ngIf="albumId !== null" class="subtitle">
+    Album #{{ albumId }}
+  </p>
+
+  <div *ngIf="isLoading" class="state state--loading">
+    Loading photos...
+  </div>
+
+  <div *ngIf="!isLoading && error" class="state state--error">
+    {{ error }}
+  </div>
+
+  <div *ngIf="!isLoading && !error && photos.length === 0" class="state">
+    No photos to display.
+  </div>
+
+  <div *ngIf="!isLoading && !error && photos.length > 0" class="photos-grid">
+    <figure class="photo-card" *ngFor="let photo of photos">
+      <img [src]="photo.thumbnailUrl" [alt]="photo.title" />
+      <figcaption>{{ photo.title }}</figcaption>
+    </figure>
+  </div>
+
+  <button type="button" class="link-button" (click)="goBackToAlbum()">
+    Back to Album
+  </button>
+</section>
+

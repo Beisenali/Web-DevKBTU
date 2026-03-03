@@ -1,0 +1,58 @@
+<section class="page" *ngIf="!isLoading; else loading">
+  <ng-container *ngIf="album; else errorBlock">
+    <h1>Album #{{ album.id }}</h1>
+
+    <p class="meta">
+      <span><strong>User ID:</strong> {{ album.userId }}</span>
+    </p>
+
+    <div class="field">
+      <label for="title">Title</label>
+      <input
+        id="title"
+        type="text"
+        [(ngModel)]="editedTitle"
+        [disabled]="isSaving"
+      />
+    </div>
+
+    <div class="actions">
+      <button type="button" class="primary-button" (click)="save()" [disabled]="isSaving">
+        {{ isSaving ? 'Saving...' : 'Save' }}
+      </button>
+
+      <a
+        class="secondary-button"
+        [routerLink]="['/albums', album.id, 'photos']"
+      >
+        View Photos
+      </a>
+
+      <button type="button" class="link-button" (click)="goBackToAlbums()">
+        Back to Albums
+      </button>
+    </div>
+
+    <p *ngIf="error" class="state state--error">
+      {{ error }}
+    </p>
+  </ng-container>
+</section>
+
+<ng-template #loading>
+  <section class="page">
+    <p class="state state--loading">Loading album...</p>
+  </section>
+</ng-template>
+
+<ng-template #errorBlock>
+  <section class="page">
+    <p class="state state--error">
+      {{ error || 'Album not found.' }}
+    </p>
+    <button type="button" class="link-button" (click)="goBackToAlbums()">
+      Back to Albums
+    </button>
+  </section>
+</ng-template>
+

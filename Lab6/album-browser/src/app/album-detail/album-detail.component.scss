@@ -1,0 +1,84 @@
+.page {
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.meta {
+  margin-bottom: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.field input {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  border: 1px solid #cccccc;
+  font-size: 1rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.primary-button,
+.secondary-button,
+.link-button {
+  padding: 0.4rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary-button {
+  background: #1976d2;
+  color: #ffffff;
+}
+
+.primary-button:hover {
+  background: #115293;
+}
+
+.secondary-button {
+  background: #eeeeee;
+  color: #333333;
+}
+
+.secondary-button:hover {
+  background: #e0e0e0;
+}
+
+.link-button {
+  background: transparent;
+  color: #1976d2;
+}
+
+.link-button:hover {
+  text-decoration: underline;
+}
+
+.state {
+  margin-top: 1rem;
+}
+
+.state--loading {
+  color: #555;
+}
+
+.state--error {
+  color: #d32f2f;
+}
+
